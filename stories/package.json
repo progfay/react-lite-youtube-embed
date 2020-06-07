@@ -1,0 +1,19 @@
+{
+  "name": "stories",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.stories.tsx",
+  "scripts": {
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006"
+  },
+  "author": "progfay",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5"
+  }
+}
