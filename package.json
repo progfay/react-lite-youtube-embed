@@ -1,14 +1,15 @@
 {
-  "name": "react-lite-youtube-embed",
+  "name": "@progfay/react-lite-youtube-embed",
   "version": "1.0.0",
   "description": "<lite-youtube> component with React",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "lint": "eslint ./src",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -53,5 +54,8 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-standard": "^4.0.1",
     "typescript": "^3.9.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
