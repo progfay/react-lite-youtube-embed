@@ -1,6 +1,6 @@
 {
   "name": "@progfay/react-lite-youtube-embed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "<lite-youtube> component with React",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -9,7 +9,9 @@
     "lint": "eslint ./src",
     "prepare": "npm run build"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/progfay/react-lite-youtube-embed.git"
