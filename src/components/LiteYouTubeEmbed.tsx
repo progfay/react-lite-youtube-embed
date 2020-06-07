@@ -13,6 +13,9 @@ interface Props {
 }
 
 export const LiteYouTubeEmbed: FC<Props> = ({ videoId, title, width, height }) => {
+  const [warmConnection, setWarmConnection] = useState(false)
+  const onPointerOver = useCallback(() => { setWarmConnection(true) }, [])
+
   const [isActive, setIsActive] = useState(false)
   const onClick = useCallback(() => { setIsActive(true) }, [])
 
@@ -25,8 +28,18 @@ export const LiteYouTubeEmbed: FC<Props> = ({ videoId, title, width, height }) =
       frameBorder='0'
     />
   ) : (
-    <YouTubeThumbnail videoId={videoId} onClick={onClick}>
-      <YouTubePlayButton />
-    </YouTubeThumbnail>
+    <>
+      {warmConnection && (
+        <>
+          <link rel='preconnect' crossOrigin='anonymous' href='https://www.youtube-nocookie.com' />
+          <link rel='preconnect' crossOrigin='anonymous' href='https://www.google.com' />
+          <link rel='preconnect' crossOrigin='anonymous' href='https://googleads.g.doubleclick.net' />
+          <link rel='preconnect' crossOrigin='anonymous' href='https://static.doubleclick.net' />
+        </>
+      )}
+      <YouTubeThumbnail videoId={videoId} onPointerOver={onPointerOver} onClick={onClick}>
+        <YouTubePlayButton />
+      </YouTubeThumbnail>
+    </>
   )
 }
