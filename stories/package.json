@@ -11,9 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.2",
-    "@storybook/react": "^5.3.19",
+    "@storybook/react": "^6.5.15",
     "babel-loader": "^8.1.0",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^9.4.2",
     "typescript": "^3.9.5"
   }
 }
